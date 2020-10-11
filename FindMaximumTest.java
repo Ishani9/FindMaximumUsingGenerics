@@ -56,5 +56,32 @@ public class FindMaximumTest {
 		assertEquals(third, findMaximum.findMaxFloat(first, second, third));
 	}
 	
+	//UC 3
+		@Test
+		public void givenThreeStringValue_whenFirstIsMax_returnFirst() {
+			String first = "II";
+			String second = "A2";
+			String third = "Ef";
+			assertEquals(first, findMaximum.findMaxString(first, second, third));
+		}
+		
+		@Test
+		public void givenThreeStringValue_whenSecondIsMax_returnSecond() {
+			String first = "SS";
+			String second = "ZZZ";
+			String third = "A1223";
+			assertEquals(second, findMaximum.findMaxString(first, second, third));
+		}
+		
+		@Test
+		public void givenThreeStringValue_whenThirdIsMax_returnThird() {
+			String first = "A13";
+			String second = "--4";
+			String third = "Z234";
+			assertEquals(third, findMaximum.findMaxString(first, second, third));
+		}
+		
+
+	
 
 }
