@@ -40,5 +40,24 @@ public class FindMaximum {
 				return third;
 		}
 	
+	/**
+	 * UC 3
+	 * 
+	 * @param first
+	 * @param second
+	 * @param third
+	 * @return
+	 */
+	
+	public String findMaxString(String first, String second, String third) {
+		
+		if(first.compareTo(second) > 0 && first.compareTo(third) > 0)
+			return first;
+		if(second.compareTo(first) > 0 && second.compareTo(third) > 0)
+			return second;
+		else
+			return third;
+	}
+	
 	
 }
