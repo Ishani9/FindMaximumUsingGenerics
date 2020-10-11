@@ -10,8 +10,7 @@ public class FindMaximum <T extends Comparable<T>>{
 	 * CONSTRUCTOR
 	 * 
 	 * @param arguments
-	 */
-	 
+	 */	 
 	@SafeVarargs
 	public FindMaximum(T ...arguments) {
 		this.arguments = arguments;
@@ -22,10 +21,10 @@ public class FindMaximum <T extends Comparable<T>>{
 	 * UC 4
 	 * 
 	 * @return
-	 */
-	 	
+	 */	 	
 	public T findMax() {
 		T findMax = findMax(arguments);
+		printMax(findMax);
 		return findMax;
 	}
 	
@@ -35,5 +34,16 @@ public class FindMaximum <T extends Comparable<T>>{
 		Arrays.sort(arguments);
 		return arguments[arguments.length - 1];
 	}
+	
+	
+	/**
+	 * UC 5
+	 * 
+	 * @param <T>
+	 * @param maximum
+	 */
+	static <T> void printMax(T maximum) {
+			System.out.println("Maximum among given parameters is : " + maximum);
+		}
 
 }
