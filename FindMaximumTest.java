@@ -12,7 +12,7 @@ public class FindMaximumTest {
 		Integer first = 10;
 		Integer second = -3;
 		Integer third = 5;
-		assertEquals(first, findMaximum.findMaxInt(first, second, third));
+		assertEquals(first, findMaximum.findMax(first, second, third));
 	}
 	
 	@Test
@@ -20,7 +20,7 @@ public class FindMaximumTest {
 		Integer first = 10;
 		Integer second = 33;
 		Integer third = 5;
-		assertEquals(second, findMaximum.findMaxInt(first, second, third));
+		assertEquals(second, findMaximum.findMax(first, second, third));
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ public class FindMaximumTest {
 		Integer first = 10;
 		Integer second = -3;
 		Integer third = 55;
-		assertEquals(third, findMaximum.findMaxInt(first, second, third));
+		assertEquals(third, findMaximum.findMax(first, second, third));
 	}
 	
 	//UC 2
@@ -37,7 +37,7 @@ public class FindMaximumTest {
 		Float first = 10f;
 		Float second = -3f;
 		Float third = 5f;
-		assertEquals(first, findMaximum.findMaxFloat(first, second, third));
+		assertEquals(first, findMaximum.findMax(first, second, third));
 	}
 	
 	@Test
@@ -45,7 +45,7 @@ public class FindMaximumTest {
 		Float first = 10f;
 		Float second = 33f;
 		Float third = 5f;
-		assertEquals(second, findMaximum.findMaxFloat(first, second, third));
+		assertEquals(second, findMaximum.findMax(first, second, third));
 	}
 	
 	@Test
@@ -53,7 +53,7 @@ public class FindMaximumTest {
 		Float first = 10f;
 		Float second = -3f;
 		Float third = 55f;
-		assertEquals(third, findMaximum.findMaxFloat(first, second, third));
+		assertEquals(third, findMaximum.findMax(first, second, third));
 	}
 	
 	//UC 3
@@ -62,7 +62,7 @@ public class FindMaximumTest {
 			String first = "II";
 			String second = "A2";
 			String third = "Ef";
-			assertEquals(first, findMaximum.findMaxString(first, second, third));
+			assertEquals(first, findMaximum.findMax(first, second, third));
 		}
 		
 		@Test
@@ -70,7 +70,7 @@ public class FindMaximumTest {
 			String first = "SS";
 			String second = "ZZZ";
 			String third = "A1223";
-			assertEquals(second, findMaximum.findMaxString(first, second, third));
+			assertEquals(second, findMaximum.findMax(first, second, third));
 		}
 		
 		@Test
@@ -78,7 +78,7 @@ public class FindMaximumTest {
 			String first = "A13";
 			String second = "--4";
 			String third = "Z234";
-			assertEquals(third, findMaximum.findMaxString(first, second, third));
+			assertEquals(third, findMaximum.findMax(first, second, third));
 		}
 		
 
