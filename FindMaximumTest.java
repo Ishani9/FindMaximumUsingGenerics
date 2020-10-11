@@ -49,7 +49,7 @@ public class FindMaximumTest {
 	@Test
 	public void givenFourFloatValue_whenSecondIsMax_returnSecond() {
 		Float first = 10f;
-		Float second = 33f;
+		Float second = 33.0f;
 		Float third = 5f;
 		Float forth = 4.54f;
 		assertEquals(second, new FindMaximum<Float>(first, second, third, forth).findMax());
@@ -59,17 +59,17 @@ public class FindMaximumTest {
 	public void givenThreeFloatValue_whenThirdIsMax_returnThird() {
 		Float first = 10f;
 		Float second = -3f;
-		Float third = 55f;
+		Float third = 55.004f;
 		assertEquals(third, new FindMaximum<Float>(first, second, third).findMax());
 	}
 	
 	//UC 3
 		@Test
 		public void givenFourStringValue_whenFirstIsMax_returnFirst() {
-			String first = "II";
+			String first = "iI";
 			String second = "A2";
 			String third = "Ef";
-			String forth = "Aaaaz";
+			String forth = "aaaz";
 			assertEquals(first, new FindMaximum<String>(first, second, third, forth).findMax());
 		}
 		
