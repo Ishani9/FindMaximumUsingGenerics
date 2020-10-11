@@ -7,19 +7,24 @@ public class FindMaximumTest {
 	
 	// UC 1
 	@Test
-	public void givenThreeIntValue_whenFirstIsMax_returnFirst() {
+	public void givenSixIntValue_whenSixthIsMax_returnSixth() {
 		Integer first = 10;
 		Integer second = -3;
 		Integer third = 5;
-		assertEquals(first, new FindMaximum<Integer>(first, second, third).findMax());
+		Integer forth = -5;
+		Integer fifth = -15;
+		Integer sixth = 100;
+		assertEquals(sixth, new FindMaximum<Integer>(first, second, third, forth, fifth, sixth).findMax());
 	}
 	
 	@Test
-	public void givenThreeIntValue_whenSecondIsMax_returnSecond() {
+	public void givenFiveIntValue_whenSecondIsMax_returnSecond() {
 		Integer first = 10;
 		Integer second = 33;
 		Integer third = 5;
-		assertEquals(second, new FindMaximum<Integer>(first, second, third).findMax());
+		Integer forth = -5;
+		Integer fifth = -15;
+		assertEquals(second, new FindMaximum<Integer>(first, second, third, forth, fifth).findMax());
 	}
 	
 	@Test
@@ -32,19 +37,22 @@ public class FindMaximumTest {
 	
 	//UC 2
 	@Test
-	public void givenThreeFloatValue_whenFirstIsMax_returnFirst() {
-		Float first = 10f;
-		Float second = -3f;
-		Float third = 5f;
-		assertEquals(first, new FindMaximum<Float>(first, second, third).findMax());
+	public void givenFiveFloatValue_whenFirstIsMax_returnFirst() {
+		Float first = 100.22f;
+		Float second = -300f;
+		Float third = 50.0f;
+		Float forth = 4.54f;
+		Float fifth = 5.44f;
+		assertEquals(first, new FindMaximum<Float>(first, second, third, forth, fifth).findMax());
 	}
 	
 	@Test
-	public void givenThreeFloatValue_whenSecondIsMax_returnSecond() {
+	public void givenFourFloatValue_whenSecondIsMax_returnSecond() {
 		Float first = 10f;
 		Float second = 33f;
 		Float third = 5f;
-		assertEquals(second, new FindMaximum<Float>(first, second, third).findMax());
+		Float forth = 4.54f;
+		assertEquals(second, new FindMaximum<Float>(first, second, third, forth).findMax());
 	}
 	
 	@Test
@@ -57,19 +65,19 @@ public class FindMaximumTest {
 	
 	//UC 3
 		@Test
-		public void givenThreeStringValue_whenFirstIsMax_returnFirst() {
+		public void givenFourStringValue_whenFirstIsMax_returnFirst() {
 			String first = "II";
 			String second = "A2";
 			String third = "Ef";
-			assertEquals(first, new FindMaximum<String>(first, second, third).findMax());
+			String forth = "Aaaaz";
+			assertEquals(first, new FindMaximum<String>(first, second, third, forth).findMax());
 		}
 		
 		@Test
-		public void givenThreeStringValue_whenSecondIsMax_returnSecond() {
+		public void givenTwoStringValue_whenSecondIsMax_returnSecond() {
 			String first = "SS";
 			String second = "ZZZ";
-			String third = "A1223";
-			assertEquals(second, new FindMaximum<String>(first, second, third).findMax());
+			assertEquals(second, new FindMaximum<String>(first, second).findMax());
 		}
 		
 		@Test

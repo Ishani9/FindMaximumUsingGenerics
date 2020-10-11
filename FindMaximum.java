@@ -1,47 +1,39 @@
 package com.bl.assignment;
 
+import java.util.Arrays;
+
 public class FindMaximum <T extends Comparable<T>>{
 	
-	T first;
-	T second; 
-	T third;
+	public T[] arguments;
 	
 	/**
 	 * CONSTRUCTOR
 	 * 
-	 * @param first
-	 * @param second
-	 * @param third
+	 * @param arguments
 	 */
-	public FindMaximum(T first, T second, T third) {
-		this.first = first;
-		this.second = second;
-		this.third = third;
+	 
+	@SafeVarargs
+	public FindMaximum(T ...arguments) {
+		this.arguments = arguments;
 	}
 	
 	
 	/**
-	 * UC 3 REFACTOR 2
+	 * UC 4
 	 * 
-	 * @param <T>
-	 * @param first
-	 * @param second
-	 * @param third
 	 * @return
 	 */
-	
+	 	
 	public T findMax() {
-		return findMax(first, second, third);
+		T findMax = findMax(arguments);
+		return findMax;
 	}
 	
-	static <T extends Comparable<T>> T  findMax(T first, T second, T third) {
+	@SafeVarargs
+	static <T extends Comparable<T>> T  findMax(T ...arguments) {
 		
-		if(first.compareTo(second) > 0 && first.compareTo(third) > 0)
-			return first;
-		if(second.compareTo(first) > 0 && second.compareTo(third) > 0)
-			return second;
-		else
-			return third;
+		Arrays.sort(arguments);
+		return arguments[arguments.length - 1];
 	}
 
 }
